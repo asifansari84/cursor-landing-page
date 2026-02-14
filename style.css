@@ -184,6 +184,7 @@ header .btn a:first-child:hover {
 /* Section: Trusted */
 .trusted .container {
 	padding-bottom: 30px;
+	padding-top: 0;
 }
 
 .trusted .section-title {
