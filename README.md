@@ -1,4 +1,7 @@
 # 🚀 Cursor Landing Page Project
+
+![Resume Preview](./screenshot.png)
+
 ## Modern Developer Tool Landing Page UI
 
 This project is a clean and modern landing page design inspired by the Cursor AI development tool.
