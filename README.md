@@ -40,7 +40,7 @@ CURSOR LANDING PAGE
 ## 🚀 How to Use
 
 Step 1: Download or Clone
-git clone https://github.com/asifansari84/resume.git
+git clone https://github.com/asifansari84/cursor-landing-page.git
 
 Step 2:
 
