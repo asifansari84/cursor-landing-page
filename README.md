@@ -1,6 +1,6 @@
 # 🚀 Cursor Landing Page Project
 
-🔗 **Live Demo:** <https://asifansari84.github.io/resume/>
+🔗 **Live Demo:** <https://asifansari84.github.io/cursor-landing-page//>
 
 ![Resume Preview](./screenshot.png)
 
