@@ -2,7 +2,7 @@
 
 🔗 **Live Demo:** <https://asifansari84.github.io/cursor-landing-page//>
 
-![Resume Preview](./screenshot.png)
+![Resume Preview](./assets/img/demo-landing-page.png)
 
 ## Modern Developer Tool Landing Page UI
 
