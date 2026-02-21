@@ -508,6 +508,12 @@ button a:hover {
 	width: 18px;
 	height: 18px;
 	filter: brightness(0);
+	transition: .3s all;
+}
+
+.site-footer .copyrigth-area .icons img:hover,
+.site-footer .copyrigth-area .icons svg:hover {
+	opacity: .8;
 }
 
 .site-footer .copyrigth-area .icons .computer {
@@ -526,6 +532,11 @@ button a:hover {
 	border-radius: 50px;
 	gap: 4px;
 	cursor: pointer;
+	transition: .3s all;
+}
+
+.site-footer .copyrigth-area .lanaguage:hover {
+	background: #deddd7;
 }
 
 .site-footer .copyrigth-area .lanaguage img {
