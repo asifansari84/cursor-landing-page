@@ -472,3 +472,70 @@ button a:hover {
 .site-footer .copyright a:hover {
 	color: var(--headline);
 }
+
+.site-footer .copyrigth-area {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.site-footer .copyrigth-area .icons {
+	flex: 0 0 229px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 15px;
+}
+
+.site-footer .copyrigth-area .toggle {
+	background: #E6E5E0;
+	display: flex;
+	border-radius: 50px;
+}
+
+.site-footer .copyrigth-area .icon {
+	padding: 5px 10px;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.site-footer .copyrigth-area .icons img,
+.site-footer .copyrigth-area .icons svg {
+	width: 18px;
+	height: 18px;
+	filter: brightness(0);
+}
+
+.site-footer .copyrigth-area .icons .computer {
+	background: #D3D2CC;
+}
+
+.site-footer .copyrigth-area .lanaguage {
+	font-size: 14px;
+	line-height: 1.2;
+	color: var(--headline);
+	display: flex;
+	align-items: center;
+	background: #E6E5E0;
+	border: 0;
+	padding: 5px 12px;
+	border-radius: 50px;
+	gap: 4px;
+	cursor: pointer;
+}
+
+.site-footer .copyrigth-area .lanaguage img {
+	filter: brightness(0);
+	width: 14px;
+	height: 14px;
+	object-fit: contain;
+}
+
+.site-footer .copyrigth-area .lanaguage svg {
+	transform: rotate(90deg);
+	width: 10px;
+}

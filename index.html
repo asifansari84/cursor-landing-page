@@ -1,447 +1,528 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" href="./assets/img/favicon-light.svg" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Cursor Dev Tool</title>
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container">
-				<div class="logo">
-					<svg fill="none" class="w-[95.37px] lg:w-[95.75px]" viewBox="0 0 2193 545" xmlns="http://www.w3.org/2000/svg" overflow="visible"><path d="M466.383 137.073 259.914 17.87a21.45 21.45 0 0 0-21.441 0L32.014 137.073A18.03 18.03 0 0 0 23 152.688v240.375a18.04 18.04 0 0 0 9.014 15.615l206.469 119.203a21.45 21.45 0 0 0 21.441 0l206.468-119.203a18.03 18.03 0 0 0 9.015-15.615V152.688a18.04 18.04 0 0 0-9.015-15.615zm-12.969 25.25L254.098 507.546c-1.347 2.326-4.904 1.376-4.904-1.319V280.179c0-4.517-2.414-8.695-6.33-10.963L47.106 156.197c-2.326-1.347-1.376-4.905 1.318-4.905h398.631c5.661 0 9.199 6.136 6.368 11.041h-.009zm269.839-13.483h87.856v48.397h-84.881c-45.789 0-81.527 26.432-81.527 82.273s35.738 82.273 81.527 82.273h84.881v48.397h-91.578c-76.691 0-131.039-45.043-131.039-130.66 0-85.618 58.07-130.661 134.761-130.661zm132.528 0h54.348v159.7c0 39.828 18.242 58.448 61.056 58.448 42.815 0 61.055-18.61 61.055-58.448v-159.7h54.35v170.866c0 58.071-36.85 94.933-115.405 94.933-78.551 0-115.404-37.231-115.404-95.301zm514.839 74.073c0 29.04-16.75 51.372-39.09 61.056v.746c23.45 3.354 35.37 20.103 35.73 42.814l1.12 82.641h-54.35l-1.11-73.705c-.37-16.381-10.06-26.432-29.41-26.432h-90.47V410.17h-54.34V148.84h150.02c49.15 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.24-34.623h-88.61v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623zm260.2 103.483c0-18.61-11.91-26.432-29.77-27.915l-60.31-5.583c-52.12-4.837-79.3-25.318-79.3-74.83s33.51-76.69 81.53-76.69h133.27v46.904h-129.55c-18.61 0-30.52 9.683-30.52 28.294 0 18.61 12.28 27.547 30.9 29.04l61.42 5.214c46.54 4.091 77.06 25.318 77.06 75.198s-32.38 76.69-78.17 76.69h-139.23v-46.904h134.01c17.5 0 28.66-11.912 28.66-29.408zm213.7-189.477c81.89 0 133.65 52.487 133.65 134.761 0 82.273-53.98 135.506-135.88 135.506s-133.65-53.233-133.65-135.506c0-82.274 53.98-134.761 135.88-134.761m77.43 135.129c0-55.095-32.02-87.479-78.56-87.479-46.53 0-78.55 32.384-78.55 87.479s32.02 87.478 78.55 87.478c46.54 0 78.56-32.384 78.56-87.478m325.73-56.589c0 29.04-16.75 51.372-39.1 61.056v.746c23.46 3.354 35.37 20.103 35.74 42.814l1.12 82.641h-54.35l-1.12-73.705c-.36-16.381-10.05-26.432-29.4-26.432h-90.47V410.17h-54.35V148.84h150.03c49.14 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.25-34.623h-88.6v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623z" fill="currentColor"/></svg>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#features">Features</a></li>
-						<li><a href="#enterprise">Enterprise</a></li>
-						<li><a href="#resources">Resources</a></li>
-						<li><a href="#changelog">Changelog</a></li>
-					</ul>
-				</nav>
-				<div class="btn">
-					<a href="#">Sign in</a>
-					<a href="#">Download</a>
-				</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="./assets/img/favicon-light.svg" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Cursor Dev Tool</title>
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="container">
+			<div class="logo">
+				<svg fill="none" class="w-[95.37px] lg:w-[95.75px]" viewBox="0 0 2193 545" xmlns="http://www.w3.org/2000/svg"
+					overflow="visible">
+					<path
+						d="M466.383 137.073 259.914 17.87a21.45 21.45 0 0 0-21.441 0L32.014 137.073A18.03 18.03 0 0 0 23 152.688v240.375a18.04 18.04 0 0 0 9.014 15.615l206.469 119.203a21.45 21.45 0 0 0 21.441 0l206.468-119.203a18.03 18.03 0 0 0 9.015-15.615V152.688a18.04 18.04 0 0 0-9.015-15.615zm-12.969 25.25L254.098 507.546c-1.347 2.326-4.904 1.376-4.904-1.319V280.179c0-4.517-2.414-8.695-6.33-10.963L47.106 156.197c-2.326-1.347-1.376-4.905 1.318-4.905h398.631c5.661 0 9.199 6.136 6.368 11.041h-.009zm269.839-13.483h87.856v48.397h-84.881c-45.789 0-81.527 26.432-81.527 82.273s35.738 82.273 81.527 82.273h84.881v48.397h-91.578c-76.691 0-131.039-45.043-131.039-130.66 0-85.618 58.07-130.661 134.761-130.661zm132.528 0h54.348v159.7c0 39.828 18.242 58.448 61.056 58.448 42.815 0 61.055-18.61 61.055-58.448v-159.7h54.35v170.866c0 58.071-36.85 94.933-115.405 94.933-78.551 0-115.404-37.231-115.404-95.301zm514.839 74.073c0 29.04-16.75 51.372-39.09 61.056v.746c23.45 3.354 35.37 20.103 35.73 42.814l1.12 82.641h-54.35l-1.11-73.705c-.37-16.381-10.06-26.432-29.41-26.432h-90.47V410.17h-54.34V148.84h150.02c49.15 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.24-34.623h-88.61v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623zm260.2 103.483c0-18.61-11.91-26.432-29.77-27.915l-60.31-5.583c-52.12-4.837-79.3-25.318-79.3-74.83s33.51-76.69 81.53-76.69h133.27v46.904h-129.55c-18.61 0-30.52 9.683-30.52 28.294 0 18.61 12.28 27.547 30.9 29.04l61.42 5.214c46.54 4.091 77.06 25.318 77.06 75.198s-32.38 76.69-78.17 76.69h-139.23v-46.904h134.01c17.5 0 28.66-11.912 28.66-29.408zm213.7-189.477c81.89 0 133.65 52.487 133.65 134.761 0 82.273-53.98 135.506-135.88 135.506s-133.65-53.233-133.65-135.506c0-82.274 53.98-134.761 135.88-134.761m77.43 135.129c0-55.095-32.02-87.479-78.56-87.479-46.53 0-78.55 32.384-78.55 87.479s32.02 87.478 78.55 87.478c46.54 0 78.56-32.384 78.56-87.478m325.73-56.589c0 29.04-16.75 51.372-39.1 61.056v.746c23.46 3.354 35.37 20.103 35.74 42.814l1.12 82.641h-54.35l-1.12-73.705c-.36-16.381-10.05-26.432-29.4-26.432h-90.47V410.17h-54.35V148.84h150.03c49.14 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.25-34.623h-88.6v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623z"
+						fill="currentColor" />
+				</svg>
 			</div>
-		</header>
-		<section class="banner">
-			<div class="container">
-				<h1 class="section-title">
-					Built to make you extraordinarily productive,<br /> Cursor is the best way to code with AI.
-				</h1>
-				<div class="btn">
-					<a href="#">
-						Download for Windows
-						<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 14.53H0V16h13zm-1.722-5.187-1.102-1.039-2.897 2.732V0H5.721v11.036L2.825 8.304l-1.102 1.04 4.776 4.503z" fill="#fff"/></svg>
-					</a>
-				</div>
-				<div class="img-wrapper">
-					<img src="./assets/img/cursor-image.png" alt="cursor" width="1040" height="615"/>
-				</div>
+			<nav>
+				<ul>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#enterprise">Enterprise</a></li>
+					<li><a href="#resources">Resources</a></li>
+					<li><a href="#changelog">Changelog</a></li>
+				</ul>
+			</nav>
+			<div class="btn">
+				<a href="#">Sign in</a>
+				<a href="#">Download</a>
 			</div>
-		</section>
-		<section class="trusted">
-			<div class="container">
-				<h2 class="section-title center">
-					Trusted every day by teams that build world-class software
-				</h2>
-				<div class="logo-container">
-					<div class="logo">
-						<img src="./assets/img/stripe-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/openai-logo.svg" alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/linear-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/datadog-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/nvidia-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/figma-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/ramp-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-					<div class="logo">
-						<img src="./assets/img/adobe-logo.svg"	alt="stripe" width="100" height="40" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="sections" id="features">
-			<div class="container">
-				<div class="wrapper">
-					<div class="left-block">
-						<a href="#">
-							<div class="title">Agents turn ideas into code</div>
-							<div class="desc">
-								Accelerate development by handing off tasks to Cursor, while you
-								focus on making decisions.
-							</div>
-							<div class="cta">
-								Learn about agentic development
-								<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z" fill="#f54e00"/></svg>
-							</div>
-						</a>
-					</div>
-					<div class="right-block">
-						<img src="./assets/img/block-image-one.png" alt="image" width="840" height="680" />
-					</div>
-				</div>
-				<div class="wrapper">
-					<div class="left-block">
-						<a href="#">
-							<div class="title">Magically accurate autocomplete</div>
-							<div class="desc">
-								Our specialized Tab model predicts your next action with
-								striking speed and precision.
-							</div>
-							<div class="cta">
-								Learn about Tab
-								<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z" fill="#f54e00"/></svg>
-							</div>
-						</a>
-					</div>
-					<div class="right-block">
-						<img src="./assets/img/block-image-two.png" alt="image" width="840" height="680" />
-					</div>
-				</div>
-				<div class="wrapper">
-					<div class="left-block">
-						<a href="#">
-							<div class="title">In every tool, at every step</div>
-							<div class="desc">
-								Cursor reviews your PRs in GitHub, collaborates in Slack, and
-								runs in your terminal.
-							</div>
-							<div class="cta">
-								Learn about Cursor's surfaces
-								<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z" fill="#f54e00"/></svg>	
-							</div>
-						</a>
-					</div>
-					<div class="right-block">
-						<img src="./assets/img/block-image-three.png" alt="image" width="840" height="680" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="testimonials">
-			<div class="container">
-				<h2 class="section-title center">The new way to build software.</h2>
-				<div class="wrapper grid">
-					<div class="block">
-						<p class="testi-content">
-							“It was night and day from one batch to another, adoption went
-							from single digits to over 80%. It just spread like wildfire, all
-							the best builders were using Cursor.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/diana-hu-avatar.webp" alt="avatar" width="40" height="40" />
-							<div class="content">
-								<div class="name">Diana Hu</div>
-								<div class="designation">General Partner, Y Combinator</div>
-							</div>
-						</div>
-					</div>
-					<div class="block">
-						<p class="testi-content">
-							“My favorite enterprise AI service is Cursor. Every one of our
-							engineers, some 40,000, are now assisted by AI and our
-							productivity has gone up incredibly.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/jensen.webp" alt="avatar" width="40" height="40" />
-							<div class="content">
-								<div class="name">Jensen Huang</div>
-								<div class="designation">President & CEO, NVIDIA</div>
-							</div>
-						</div>
-					</div>
-					<div class="block">
-						<p class="testi-content">
-							“The best LLM applications have an autonomy slider: you control
-							how much independence to give the AI. In Cursor, you can do Tab
-							completion, Cmd+K for targeted edits, or you can let it rip with
-							the full autonomy agentic version.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/andrej-karpathy-avatar.webp" alt="avatar" width="40" height="40" />
-							<div class="content">
-								<div class="name">Andrej Karpathy</div>
-								<div class="designation">CEO, Eureka Labs</div>
-							</div>
-						</div>
-					</div>
-					<div class="block">
-						<p class="testi-content">
-							“Cursor quickly grew from hundreds to thousands of extremely
-							enthusiastic Stripe employees. We spend more on R&D and software
-							creation than any other undertaking, and there's significant
-							economic outcomes when making that process more efficient.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/patrick-collison-avatar.webp" alt="avatar" width="40" height="40" />
-							<div class="content">
-								<div class="name">Patrick Collison</div>
-								<div class="designation">Co‑Founder & CEO, Stripe</div>
-							</div>
-						</div>
-					</div>
-					<div class="block">
-						<p class="testi-content">
-							“The most useful AI tool that I currently pay for, hands down, is
-							Cursor. It's fast, autocompletes when and where you need it to,
-							handles brackets properly, sensible keyboard shortcuts,
-							bring-your-own-model... everything is well put together.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/shadcn-avatar.webp" alt="avatar" width="40" height="40" />	
-							<div class="content">
-								<div class="name">shadcn</div>
-								<div class="designation">Creator of shadcn/ui</div>
-							</div>
-						</div>
-					</div>
-					<div class="block">
-						<p class="testi-content">
-							“It's definitely becoming more fun to be a programmer. We are at
-							the 1% of what's possible, and it's in interactive experiences
-							like Cursor where models like GPT-5 shine brightest.”
-						</p>
-						<div class="info">
-							<img class="avatar" src="./assets/img/greg-brockman-avatar.webp" alt="avatar" width="40" height="40" />	
-							<div class="content">
-								<div class="name">Greg Brockman</div>
-								<div class="designation">President, OpenAI</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="feature-cards">
-			<div class="container">
-				<h2 class="section-title">Stay on the frontier</h2>
-				<div class="wrapper grid">
-					<div class="block">
-						<div class="title">Use the best model for every task</div>
-						<div class="desc">
-							Choose between every cutting-edge model from OpenAI, Anthropic,
-							Gemini, xAI, and Cursor.
-						</div>
-						<a href="#" class="cta">
-							Explore models
-							<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z" fill="#f54e00"/></svg>
-						</a>
-						<img src="./assets/img/feature-image-one.png" alt="image" width="392" height="392" />
-					</div>
-					<div class="block">
-						<div class="title">Complete codebase understanding</div>
-						<div class="desc">
-							Cursor learns how your codebase works, no matter the scale or
-							complexity.
-						</div>
-						<a href="#" class="cta">
-							Learn about codebase indexing
-							<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z" fill="#f54e00"/></svg>
-						</a>
-						<img src="./assets/img/feature-image-two.png" alt="image" width="392" height="392" />
-					</div>
-					<div class="block">
-						<div class="title">Develop enduring software</div>
-						<div class="desc">
-							Trusted by over half of the Fortune 500 to accelerate development,
-							securely and at scale.
-						</div>
-						<a href="#" class="cta">
-							Explore enterprise
-							<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z" fill="#f54e00"/></svg>
-						</a>
-						<img src="./assets/img/feature-image-three.webp" alt="image" width="392" height="392" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="changelog" id="changelog">
-			<div class="container">
-				<h2 class="section-title">Changelog</h2>
-				<div class="wrapper grid">
-					<a href="#" class="block">
-						<div class="date">Feb 12, 2026</div>
-						<div class="title">Long-running Agents in Research Preview</div>
-					</a>
-					<a href="#" class="block">
-						<div class="date">Jan 22, 2026</div>
-						<div class="title">Subagents, Skills, and Image Generation</div>
-					</a>
-					<a href="#" class="block">
-						<div class="date">Jan 16, 2026</div>
-						<div class="title">CLI Agent Modes and Cloud Handoff</div>
-					</a>
-					<a href="#" class="block">
-						<div class="date">Jan 8, 2026</div>
-						<div class="title">
-							New CLI Features and Improved CLI Performance
-						</div>
-					</a>
-				</div>
-				<a href="#" class="cta"
-					>See what's new in Cursor
-					<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z" fill="#f54e00"/></svg>	
+		</div>
+	</header>
+	<section class="banner">
+		<div class="container">
+			<h1 class="section-title">
+				Built to make you extraordinarily productive,<br /> Cursor is the best way to code with AI.
+			</h1>
+			<div class="btn">
+				<a href="#">
+					Download for Windows
+					<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M13 14.53H0V16h13zm-1.722-5.187-1.102-1.039-2.897 2.732V0H5.721v11.036L2.825 8.304l-1.102 1.04 4.776 4.503z"
+							fill="#fff" />
+					</svg>
 				</a>
 			</div>
-		</section>
-		<section class="about">
-			<div class="container">
-				<div class="wrapper">
-					<div class="left-block">
-						<div class="title">
-							Cursor is an applied research team focused on building the future
-							of software development.
-						</div>
-						<a href="#" class="cta"
-							>Join us
-							<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z" fill="#f54e00"/></svg>	
-						</a>
-					</div>
-					<div class="right-block">
-						<img src="./assets/img/homepage-team-photo.webp" alt="team photo" width="840" height="473" />
-					</div>
+			<div class="img-wrapper">
+				<img src="./assets/img/cursor-image.png" alt="cursor" width="1040" height="615" />
+			</div>
+		</div>
+	</section>
+	<section class="trusted">
+		<div class="container">
+			<h2 class="section-title center">
+				Trusted every day by teams that build world-class software
+			</h2>
+			<div class="logo-container">
+				<div class="logo">
+					<img src="./assets/img/stripe-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/openai-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/linear-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/datadog-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/nvidia-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/figma-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/ramp-logo.svg" alt="stripe" width="100" height="40" />
+				</div>
+				<div class="logo">
+					<img src="./assets/img/adobe-logo.svg" alt="stripe" width="100" height="40" />
 				</div>
 			</div>
-		</section>
-		<section class="cta-section">
-			<div class="container">
-				<h2 class="section-title">Try Cursor now.</h2>
-				<div class="btn">
+		</div>
+	</section>
+	<section class="sections" id="features">
+		<div class="container">
+			<div class="wrapper">
+				<div class="left-block">
 					<a href="#">
-						Download for Windows
-						<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 14.53H0V16h13zm-1.722-5.187-1.102-1.039-2.897 2.732V0H5.721v11.036L2.825 8.304l-1.102 1.04 4.776 4.503z" fill="#fff"/></svg>		
+						<div class="title">Agents turn ideas into code</div>
+						<div class="desc">
+							Accelerate development by handing off tasks to Cursor, while you
+							focus on making decisions.
+						</div>
+						<div class="cta">
+							Learn about agentic development
+							<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+									fill="#f54e00" />
+							</svg>
+						</div>
 					</a>
 				</div>
+				<div class="right-block">
+					<img src="./assets/img/block-image-one.png" alt="image" width="840" height="680" />
+				</div>
 			</div>
-		</section>
-		<footer class="site-footer">
-			<div class="container">
-				<div class="wrapper">
-					<div class="widget">
-						<h3 class="widget-title">Product</h3>
-						<ul>
-							<li>
-								<a href="#">Agents</a>
-							</li>
-							<li>
-								<a href="#">Enterprise</a>
-							</li>
-							<li>
-								<a href="#">Code Review</a>
-							</li>
-							<li>
-								<a href="#">Tab</a>
-							</li>
-							<li>
-								<a href="#">CLI</a>
-							</li>
-							<li>
-								<a href="#">Cloud Agents</a>
-							</li>
-							<li>
-								<a href="#">Pricing</a>
-							</li>
-						</ul>
-					</div>
-					<div class="widget">
-						<h3 class="widget-title">Resources</h3>
-						<ul>
-							<li>
-								<a href="#">Download</a>
-							</li>
-							<li>
-								<a href="#">Changelog</a>
-							</li>
-							<li>
-								<a href="#">Docs</a>
-							</li>
-							<li>
-								<a href="#">Forum</a>
-							</li>
-							<li>
-								<a href="#">Status</a>
-							</li>
-						</ul>
-					</div>
-					<div class="widget">
-						<h3 class="widget-title">Company</h3>
-						<ul>
-							<li>
-								<a href="#">Careers</a>
-							</li>
-							<li>
-								<a href="#">Blog</a>
-							</li>
-							<li>
-								<a href="#">Community</a>
-							</li>
-							<li>
-								<a href="#">Students</a>
-							</li>
-							<li>
-								<a href="#">Brand</a>
-							</li>
-							<li>
-								<a href="#">Anysphere</a>
-							</li>
-						</ul>
-					</div>
-					<div class="widget">
-						<h3 class="widget-title">Legal</h3>
-						<ul>
-							<li>
-								<a href="#">Terms of Service</a>
-							</li>
-							<li>
-								<a href="#">Privacy Policy</a>
-							</li>
-							<li>
-								<a href="#">Data Use</a>
-							</li>
-							<li>
-								<a href="#">Security</a>
-							</li>
-						</ul>
-					</div>
-					<div class="widget">
-						<h3 class="widget-title">Connect</h3>
-						<ul>
-							<li>
-								<a href="#">X</a>
-							</li>
-							<li>
-								<a href="#">LinkedIn</a>
-							</li>
-							<li>
-								<a href="#">YouTube </a>
-							</li>
-							<li>
-								<a href="#">Security</a>
-							</li>
-						</ul>
+			<div class="wrapper">
+				<div class="left-block">
+					<a href="#">
+						<div class="title">Magically accurate autocomplete</div>
+						<div class="desc">
+							Our specialized Tab model predicts your next action with
+							striking speed and precision.
+						</div>
+						<div class="cta">
+							Learn about Tab
+							<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+									fill="#f54e00" />
+							</svg>
+						</div>
+					</a>
+				</div>
+				<div class="right-block">
+					<img src="./assets/img/block-image-two.png" alt="image" width="840" height="680" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left-block">
+					<a href="#">
+						<div class="title">In every tool, at every step</div>
+						<div class="desc">
+							Cursor reviews your PRs in GitHub, collaborates in Slack, and
+							runs in your terminal.
+						</div>
+						<div class="cta">
+							Learn about Cursor's surfaces
+							<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+									fill="#f54e00" />
+							</svg>
+						</div>
+					</a>
+				</div>
+				<div class="right-block">
+					<img src="./assets/img/block-image-three.png" alt="image" width="840" height="680" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials">
+		<div class="container">
+			<h2 class="section-title center">The new way to build software.</h2>
+			<div class="wrapper grid">
+				<div class="block">
+					<p class="testi-content">
+						“It was night and day from one batch to another, adoption went
+						from single digits to over 80%. It just spread like wildfire, all
+						the best builders were using Cursor.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/diana-hu-avatar.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">Diana Hu</div>
+							<div class="designation">General Partner, Y Combinator</div>
+						</div>
 					</div>
 				</div>
+				<div class="block">
+					<p class="testi-content">
+						“My favorite enterprise AI service is Cursor. Every one of our
+						engineers, some 40,000, are now assisted by AI and our
+						productivity has gone up incredibly.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/jensen.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">Jensen Huang</div>
+							<div class="designation">President & CEO, NVIDIA</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<p class="testi-content">
+						“The best LLM applications have an autonomy slider: you control
+						how much independence to give the AI. In Cursor, you can do Tab
+						completion, Cmd+K for targeted edits, or you can let it rip with
+						the full autonomy agentic version.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/andrej-karpathy-avatar.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">Andrej Karpathy</div>
+							<div class="designation">CEO, Eureka Labs</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<p class="testi-content">
+						“Cursor quickly grew from hundreds to thousands of extremely
+						enthusiastic Stripe employees. We spend more on R&D and software
+						creation than any other undertaking, and there's significant
+						economic outcomes when making that process more efficient.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/patrick-collison-avatar.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">Patrick Collison</div>
+							<div class="designation">Co‑Founder & CEO, Stripe</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<p class="testi-content">
+						“The most useful AI tool that I currently pay for, hands down, is
+						Cursor. It's fast, autocompletes when and where you need it to,
+						handles brackets properly, sensible keyboard shortcuts,
+						bring-your-own-model... everything is well put together.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/shadcn-avatar.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">shadcn</div>
+							<div class="designation">Creator of shadcn/ui</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<p class="testi-content">
+						“It's definitely becoming more fun to be a programmer. We are at
+						the 1% of what's possible, and it's in interactive experiences
+						like Cursor where models like GPT-5 shine brightest.”
+					</p>
+					<div class="info">
+						<img class="avatar" src="./assets/img/greg-brockman-avatar.webp" alt="avatar" width="40" height="40" />
+						<div class="content">
+							<div class="name">Greg Brockman</div>
+							<div class="designation">President, OpenAI</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="feature-cards">
+		<div class="container">
+			<h2 class="section-title">Stay on the frontier</h2>
+			<div class="wrapper grid">
+				<div class="block">
+					<div class="title">Use the best model for every task</div>
+					<div class="desc">
+						Choose between every cutting-edge model from OpenAI, Anthropic,
+						Gemini, xAI, and Cursor.
+					</div>
+					<a href="#" class="cta">
+						Explore models
+						<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z"
+								fill="#f54e00" />
+						</svg>
+					</a>
+					<img src="./assets/img/feature-image-one.png" alt="image" width="392" height="392" />
+				</div>
+				<div class="block">
+					<div class="title">Complete codebase understanding</div>
+					<div class="desc">
+						Cursor learns how your codebase works, no matter the scale or
+						complexity.
+					</div>
+					<a href="#" class="cta">
+						Learn about codebase indexing
+						<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z"
+								fill="#f54e00" />
+						</svg>
+					</a>
+					<img src="./assets/img/feature-image-two.png" alt="image" width="392" height="392" />
+				</div>
+				<div class="block">
+					<div class="title">Develop enduring software</div>
+					<div class="desc">
+						Trusted by over half of the Fortune 500 to accelerate development,
+						securely and at scale.
+					</div>
+					<a href="#" class="cta">
+						Explore enterprise
+						<svg width="11" height="11" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24.438.015a3.55 3.55 0 1 0 0 7.07l36.098.022L.913 66.73a3.56 3.56 0 0 0 5.027 5.028l59.624-59.624-.029 36.105a3.62 3.62 0 0 0 3.536 3.536 3.53 3.53 0 0 0 3.535-3.536V3.55A3.47 3.47 0 0 0 69.071.015z"
+								fill="#f54e00" />
+						</svg>
+					</a>
+					<img src="./assets/img/feature-image-three.webp" alt="image" width="392" height="392" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="changelog" id="changelog">
+		<div class="container">
+			<h2 class="section-title">Changelog</h2>
+			<div class="wrapper grid">
+				<a href="#" class="block">
+					<div class="date">Feb 12, 2026</div>
+					<div class="title">Long-running Agents in Research Preview</div>
+				</a>
+				<a href="#" class="block">
+					<div class="date">Jan 22, 2026</div>
+					<div class="title">Subagents, Skills, and Image Generation</div>
+				</a>
+				<a href="#" class="block">
+					<div class="date">Jan 16, 2026</div>
+					<div class="title">CLI Agent Modes and Cloud Handoff</div>
+				</a>
+				<a href="#" class="block">
+					<div class="date">Jan 8, 2026</div>
+					<div class="title">
+						New CLI Features and Improved CLI Performance
+					</div>
+				</a>
+			</div>
+			<a href="#" class="cta">See what's new in Cursor
+				<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+						fill="#f54e00" />
+				</svg>
+			</a>
+		</div>
+	</section>
+	<section class="about">
+		<div class="container">
+			<div class="wrapper">
+				<div class="left-block">
+					<div class="title">
+						Cursor is an applied research team focused on building the future
+						of software development.
+					</div>
+					<a href="#" class="cta">Join us
+						<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+								fill="#f54e00" />
+						</svg>
+					</a>
+				</div>
+				<div class="right-block">
+					<img src="./assets/img/homepage-team-photo.webp" alt="team photo" width="840" height="473" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="cta-section">
+		<div class="container">
+			<h2 class="section-title">Try Cursor now.</h2>
+			<div class="btn">
+				<a href="#">
+					Download for Windows
+					<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M13 14.53H0V16h13zm-1.722-5.187-1.102-1.039-2.897 2.732V0H5.721v11.036L2.825 8.304l-1.102 1.04 4.776 4.503z"
+							fill="#fff" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer class="site-footer">
+		<div class="container">
+			<div class="wrapper">
+				<div class="widget">
+					<h3 class="widget-title">Product</h3>
+					<ul>
+						<li>
+							<a href="#">Agents</a>
+						</li>
+						<li>
+							<a href="#">Enterprise</a>
+						</li>
+						<li>
+							<a href="#">Code Review</a>
+						</li>
+						<li>
+							<a href="#">Tab</a>
+						</li>
+						<li>
+							<a href="#">CLI</a>
+						</li>
+						<li>
+							<a href="#">Cloud Agents</a>
+						</li>
+						<li>
+							<a href="#">Pricing</a>
+						</li>
+					</ul>
+				</div>
+				<div class="widget">
+					<h3 class="widget-title">Resources</h3>
+					<ul>
+						<li>
+							<a href="#">Download</a>
+						</li>
+						<li>
+							<a href="#">Changelog</a>
+						</li>
+						<li>
+							<a href="#">Docs</a>
+						</li>
+						<li>
+							<a href="#">Forum</a>
+						</li>
+						<li>
+							<a href="#">Status</a>
+						</li>
+						<li>
+							<a href="#">Future</a>
+						</li>
+						<li>
+							<a href="#">Marketplace</a>
+						</li>
+					</ul>
+				</div>
+				<div class="widget">
+					<h3 class="widget-title">Company</h3>
+					<ul>
+						<li>
+							<a href="#">Careers</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+						<li>
+							<a href="#">Community</a>
+						</li>
+						<li>
+							<a href="#">Students</a>
+						</li>
+						<li>
+							<a href="#">Brand</a>
+						</li>
+						<li>
+							<a href="#">Anysphere</a>
+						</li>
+					</ul>
+				</div>
+				<div class="widget">
+					<h3 class="widget-title">Legal</h3>
+					<ul>
+						<li>
+							<a href="#">Terms of Service</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Data Use</a>
+						</li>
+						<li>
+							<a href="#">Security</a>
+						</li>
+					</ul>
+				</div>
+				<div class="widget">
+					<h3 class="widget-title">Connect</h3>
+					<ul>
+						<li>
+							<a href="#">X</a>
+						</li>
+						<li>
+							<a href="#">LinkedIn</a>
+						</li>
+						<li>
+							<a href="#">YouTube </a>
+						</li>
+						<li>
+							<a href="#">Security</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyrigth-area">
 				<p class="copyright">
 					© 2026 <a href="#">Anysphere</a>, Inc 🛡 SOC 2
 					<a href="#">Certified</a>
 				</p>
+				<div class="icons">
+					<div class="toggle">
+						<div class="icon computer">
+							<img src="./assets/img/computer.png" alt="computer-icon" width="14" height="14">
+						</div>
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256">
+								<path
+									d="M15 3v5h2V3zM7.5 6.094 6.094 7.5l3.531 3.563 1.438-1.438zm17 0-3.562 3.531 1.437 1.438L25.906 7.5zM16 9c-3.855 0-7 3.145-7 7s3.145 7 7 7 7-3.145 7-7-3.145-7-7-7m0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5-5-2.227-5-5 2.227-5 5-5M3 15v2h5v-2zm21 0v2h5v-2zM9.625 20.938 6.094 24.5 7.5 25.906l3.563-3.531zm12.75 0-1.437 1.437 3.562 3.531 1.406-1.406zM15 24v5h2v-5z"
+									transform="scale(8)" fill-opacity=".6" fill="#edecec" font-family="none" font-weight="none"
+									font-size="none" text-anchor="none" style="mix-blend-mode:normal" />
+							</svg>
+						</div>
+						<div class="icon">
+							<img src="./assets/img/moon.png" alt="moon-icon" width="14" height="14">
+						</div>
+					</div>
+					<button class="lanaguage">
+						<img src="./assets/img/globe.png" alt="globe" width="14" height="14">
+						English
+						<svg width="13" height="13" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M8.75.163A.46.46 0 0 0 8.417 0a.47.47 0 0 0-.347.133.45.45 0 0 0-.135.34.45.45 0 0 0 .165.329l3.323 3.261H.44a.47.47 0 0 0-.312.141.45.45 0 0 0 0 .626.47.47 0 0 0 .312.141h10.983L8.094 8.23a.457.457 0 0 0 0 .638A.46.46 0 0 0 8.42 9a.47.47 0 0 0 .325-.133l4.117-4.035a.44.44 0 0 0 .138-.32.44.44 0 0 0-.139-.319z"
+								fill="#26251e" />
+						</svg>
+					</button>
+				</div>
 			</div>
-		</footer>
-	</body>
+		</div>
+	</footer>
+</body>
+
 </html>
